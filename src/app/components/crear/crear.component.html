@@ -1,0 +1,33 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="titulo mb-3">
+        </h5>
+        <form>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">☑</span>
+                <input type="text" formControlName="titular"  class="form-control" placeholder="Titular" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">☑</span>
+                <input type="number" formControlName="numeroTarjeta" maxlength="16" class="form-control" placeholder="Numero Tarjeta" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <div class="row">
+                <div class="col-lg-7">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">☑</span>
+                        <input type="text" formControlName="fechaExpiracion" maxlength="5" class="form-control" placeholder="MM/YY" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">☑</span>
+                        <input type="password" formControlName="cvv" maxlength="3" class="form-control" placeholder="CVV" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                </div>
+              </div>
+              <div class="d-grid gap-2">
+                <button class="btn btn-success btn-lg" type="submit">Aceptar</button>
+              </div>
+        </form>
+    </div>
+</div>
