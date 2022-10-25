@@ -6,22 +6,23 @@
         <table class="table">
             <thead>
                 <tr>
-                  <th>titular</th>
-                  <th>Numero de Tarjeta </th>
-                  <th>fecha Expiracion</th>
+                  <th>numero</th>
+                  <th>primo</th>
+                  <th>motivo</th>
                 </tr>
               </thead>
             <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <tr *ngFor="let numero of listNumeros">
+                    <td>{{numero.numero}}</td>
+                    <td>{{numero.primo}}</td>
+                    <td>{{numero.motivo}}</td>
                     <td>
-                        <i class="fas fa-edit fa-lg text-warning mr-5" ></i>
-                        <i class="fas fa-trash-alt fa-lg text-danger " ></i>
+                        <i class="fas fa-edit fa-lg text-warning mr-5" (click)="editarTarjeta(numero)"></i>
+                        <i class="fas fa-trash-alt fa-lg text-danger " (click)="eliminarTarjeta(numero)"></i>
                     </td>
                 </tr>
-                
+                <tr>
+                </tr>
             </tbody>
         </table>
     </div>

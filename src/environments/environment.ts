@@ -4,12 +4,12 @@
 
 export const environment = {
   firebase: {
-    apiKey: "AIzaSyDjQsDOtK4RVdp4MDP6NUAp2KFZg7sHvpI",
-    authDomain: "parcial-britezlautaro.firebaseapp.com",
-    projectId: "parcial-britezlautaro",
-    storageBucket: "parcial-britezlautaro.appspot.com",
-    messagingSenderId: "632527092475",
-    appId: "1:632527092475:web:b2ee3406278c45917d0e5e"
+    apiKey: "AIzaSyBphMqViV7rjjmheZZC4H9b8f2UBccUDNc",
+    authDomain: "practica3-numeroprimo.firebaseapp.com",
+    projectId: "practica3-numeroprimo",
+    storageBucket: "practica3-numeroprimo.appspot.com",
+    messagingSenderId: "24262326372",
+    appId: "1:24262326372:web:58f84c6952a53b8cd70771"
   },
   production: false
 };

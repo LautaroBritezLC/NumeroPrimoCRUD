@@ -1,18 +1,13 @@
-export class tarjetaCredito {
+export class numeroPrimo {
     id?: string;
-    titular: string;
-    numeroTarjeta: string;
-    fechaExpiracion: string;
-    cvv: number;
-    fechaCreacion: Date;
-    fechaActualizacion: Date;
+    numero: number;
+    primo: boolean;
+    motivo: string
 
-    constructor(titular: string, numeroTarjeta: string,fechaExpiracion: string, cvv: number ){
-        this.titular = titular;
-        this.numeroTarjeta = numeroTarjeta;
-        this.fechaExpiracion = fechaExpiracion;
-        this.cvv = cvv;
-        this.fechaCreacion = new Date();
-        this.fechaActualizacion = new Date();
+
+    constructor(numero: number, primo: boolean,motivo: string){
+        this.numero = numero;
+        this.primo = primo;
+        this.motivo = motivo;
     }
 }

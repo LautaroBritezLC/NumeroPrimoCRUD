@@ -1,42 +1,45 @@
 import { Injectable } from '@angular/core';
 import { collection, Firestore , addDoc, collectionData, doc, deleteDoc, updateDoc} from '@angular/fire/firestore';
-import {tarjetaCredito} from '../models/Modelo';
+import {numeroPrimo} from '../models/Modelo';
 import {Observable, Subject} from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
 })
 export class CrudService {
-  private $tarjeta = new Subject<any>();
+  private $numero = new Subject<any>();
 
-  constructor(private firestore: Firestore) { }
+  constructor(private firestore: Firestore
+    
+    ) { }
 
-  addTarjeta(tarjeta: tarjetaCredito) {
-    const tarjetaRef = collection(this.firestore, 'tarjetaCredito');
-    return addDoc(tarjetaRef, tarjeta)
+  addTarjeta(numero: numeroPrimo) {
+    const tarjetaRef = collection(this.firestore, 'numeros');
+    return addDoc(tarjetaRef, numero)
   }
 
-  getTargeta(): Observable<tarjetaCredito[]> {
-    const tarjetaRef = collection(this.firestore, 'tarjetaCredito');
-    return collectionData(tarjetaRef, {idField: 'id'}) as Observable<tarjetaCredito[]>;
+  getTargeta(): Observable<numeroPrimo[]> {
+    const tarjetaRef = collection(this.firestore, 'numeros');
+    return collectionData(tarjetaRef, {idField: 'id'}) as Observable<numeroPrimo[]>;
   }
 
-  deleteTarjeta(tarjeta: tarjetaCredito) {
-    const tarjetaRef = doc(this.firestore, `tarjetaCredito/${tarjeta.id}`);
+  deleteTarjeta(numero: numeroPrimo) {
+    const tarjetaRef = doc(this.firestore, `numeros/${numero.id}`);
     return deleteDoc(tarjetaRef);
   }
 
-  updateTarjeta(id: string , tarjeta: tarjetaCredito) {
-    const placeRef = doc(this.firestore, `tarjetaCredito/${id}`);
-    return updateDoc(placeRef, { ...tarjeta });
+  updateTarjeta(id: string , numero: numeroPrimo) {
+    const placeRef = doc(this.firestore, `numeros/${id}`);
+    console.log(placeRef);
+    return updateDoc(placeRef, { ...numero });
   }
   
-  addtarjetaEdit(tarjeta : tarjetaCredito) {
-    this.$tarjeta.next(tarjeta);
+  addtarjetaEdit(numero : numeroPrimo) {
+    this.$numero.next(numero);
   }
 
-  getTarjetaEdit(): Observable<tarjetaCredito> {
-    return this.$tarjeta.asObservable();
+  getTarjetaEdit(): Observable<numeroPrimo> {
+    return this.$numero.asObservable();
   }
 
 }

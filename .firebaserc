@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "practica-1-6334e"
-  }
+    "default": "parcial-britezlautaro",
+    "parcial": "parcial-britezlautaro"
+  },
+  "targets": {},
+  "etags": {}
 }
